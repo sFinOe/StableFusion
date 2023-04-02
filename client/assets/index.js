@@ -1,0 +1,54 @@
+// Images
+import './images/default-profile.png';
+import './images/logo.png';
+import './images/landing_page.png';
+import './images/add_icon.png';
+import './images/image_1.png';
+import './images/image_2.png';
+import './images/image_3.png';
+import './images/image_4.png';
+import './images/image_5.png';
+import './images/image_6.png';
+import './images/image_7.png';
+import './images/image_8.png';
+import './images/image_9.png';
+import './images/image_10.png';
+import './images/image_11.png';
+import './images/background_login_page.png';
+import './images/drag_drop.png';
+import './images/delete_img.png';
+import './images/upload_success.png';
+import './images/trash.png';
+
+import './images/style_image_1.png';
+import './images/style_image_2.png';
+import './images/style_image_3.png';
+import './images/style_image_4.png';
+import './images/style_image_5.png';
+import './images/style_image_6.jpeg';
+import './images/style_image_7.jpeg';
+import './images/style_image_8.png';
+import './images/style_image_9.jpeg';
+import './images/style_image_10.jpeg';
+import './images/style_image_11.jpeg';
+import './images/style_image_12.jpeg';
+
+import './images/profession_1.png';
+import './images/profession_2.png';
+import './images/profession_3.png';
+import './images/profession_4.png';
+import './images/profession_5.png';
+import './images/profession_6.png';
+import './images/profession_7.png';
+import './images/profession_8.png';
+import './images/profession_9.png';
+import './images/profession_10.png';
+import './images/profession_11.png';
+import './images/profession_12.png';
+
+import './images/empty.jpg';
+
+import './images/preview.svg';
+import './images/publish.svg';
+import './images/square.svg';
+import './images/loading.svg';

@@ -1,0 +1,19 @@
+version: '3'
+services:
+  db:
+    image: mongo
+    container_name: my-db
+    restart: always
+    volumes:
+      - ./data:/data/db
+  app:
+    build: .
+    container_name: my-app
+    restart: on-failure
+    ports:
+      - 3000:3000
+    depends_on:
+      - db
+    environment:
+      - NODE_ENV=production
+      - MONGO_URI=mongodb://db:27017/mern

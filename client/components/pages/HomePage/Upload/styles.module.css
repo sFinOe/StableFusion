@@ -1,0 +1,188 @@
+.root {
+	flex: 1;
+	align-items: center;
+	justify-content: center;
+	display: flex;
+	flex-direction: column;
+}
+
+.upload_form {
+	background-color: #f5f5f5;
+	width: 70%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 12px;
+	border: 1px dashed gray;
+}
+
+.upload_form:hover {
+	background-color: #fafafa;
+	cursor: pointer;
+}
+
+.input_container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+
+.image_container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.text_container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 70%;
+}
+
+.showcase_container {
+	width: 70%;
+	display: flex;
+	flex: 1;
+	flex-direction: column;
+	align-items: center;
+	margin-top: 1%;
+}
+
+.image_showcase {
+	width: 100%;
+	border-radius: 12px;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	flex-direction: row;
+}
+
+.cancel_button {
+	position: absolute;
+	margin-left: 100px;
+}
+
+.cancel_button:hover {
+	cursor: pointer;
+}
+
+
+.create_studio {
+	width: 100%;
+	display: flex;
+	flex: 1;
+	flex-direction: column;
+	align-items: center;
+	margin-top: 1%;
+}
+
+.new_studio {
+	/* background-color: wheat; */
+	display: flex;
+	width: 70%;
+	height: 90px;
+	align-items: center;
+	border-radius: 12px;
+	flex-direction: row;
+}
+
+.input_field {
+	margin: 10px 5px 10px 5px;
+}
+
+.button_studio {
+	margin: 40px 5px 10px 5px;
+}
+
+.studio_container {
+	width: 100%;
+	display: flex;
+	flex: 1;
+	flex-direction: column;
+	align-items: center;
+	margin-top: 1%;
+}
+
+.studios_container {
+	display: flex;
+	width: 70%;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+.empty_studio_card {
+	display: flex;
+	width: 100%;
+	align-items: center;
+	border-radius: 12px;
+	background-color: #f5f5f5;
+}
+
+.studio_card {
+	display: flex;
+	width: 100%;
+	align-items: center;
+	border-radius: 12px;
+	background-color: #fbfbfb;
+	margin: 10px 0px 37px 0px;
+	box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.2);
+}
+
+.studio_css {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding: 10px 10px 10px 20px;
+	width: 100%;
+	margin: 10px 0px 10px 0px;
+}
+
+.ready_to_train {
+	justify-content: center;
+	align-items: center;
+}
+
+.training_overview {
+
+	display: flex;
+	/* flex-wrap: wrap; */
+	justify-content: center;
+	align-items: center;
+	margin-top: 16px;
+	margin-bottom: 16px;
+
+}
+
+.delete_card {
+	margin-right: 10px;
+	cursor: pointer;
+}
+
+.delete_card:hover {
+	opacity: 0.5;
+
+}
+
+.is_training_container {
+	justify-content: center;
+	align-items: center;
+}
+
+
+.img_block {
+	/* transition: transform 0.2s ease-in-out; */
+}
+
+.img_block:hover {
+	/* transform: scale(1.02); */
+	opacity: 0.90;
+	cursor: pointer;
+}

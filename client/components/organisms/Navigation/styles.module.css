@@ -1,0 +1,18 @@
+.sign_up_button{
+	fontFamily: "Ubuntu";
+	fontSize: "19px" 
+}
+
+.navbar_root {
+	height: 90px;
+	border: 1px solid #e0e0e0;
+}
+
+
+.container {
+	background-color: white;
+}
+
+.Navbar.Item {
+	background-color: white;
+}

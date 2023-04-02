@@ -1,0 +1,25 @@
+.root {
+  background-color: #F2F2F2;
+  padding: 3rem 1.5rem;
+
+}
+
+.content a:visited {
+  color: #000;
+}
+
+
+.container {
+  flex: 1;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+}
+
+.footerleft {
+  padding-top: 30px;
+}

@@ -1,0 +1,75 @@
+.root {
+  flex: 1;
+  background-color: white;
+  display: flex;
+}
+
+.container {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5%;
+
+}
+
+.card {
+  flex: 1;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.remember {
+  flex: 1;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+  padding-top: 20px;
+}
+
+.sign_in {
+  flex: 1;
+  flex-direction: row;
+  align-items: center;
+  display: flex;
+}
+
+
+.HomeButton_button {
+  margin-top: 25px;
+  background-color: #4361EE;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 22px;
+  padding-right: 22px;
+  border-radius: 30px;
+  display: flex;
+  box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease-out;
+  width: 350px;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #CDD0D9;
+
+
+}
+
+.HomeButton_button:hover {
+  transform: scale(1.01);
+  opacity: 0.9;
+}
+
+.HomeButton_button:active {
+  transform: scale(0.9);
+}
+
+.button_signup {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
