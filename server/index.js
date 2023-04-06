@@ -2,6 +2,7 @@ const express = require("express");
 const path = require("path");
 const bodyParser = require("body-parser");
 const https = require("https");
+const fs = require("fs");
 
 require("./config/environment");
 require("./database");
