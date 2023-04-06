@@ -1,26 +1,35 @@
-const express      = require('express');
-const path         = require('path');
-const bodyParser   = require('body-parser');
+const express = require("express");
+const path = require("path");
+const bodyParser = require("body-parser");
+const https = require("https");
 
-require('./config/environment');
-require('./database');
+require("./config/environment");
+require("./database");
 
-const routes          = require('./routes/index');
-const configPassport  = require('./passport/config');
+const routes = require("./routes/index");
+const configPassport = require("./passport/config");
 
-const assetFolder  = path.resolve(__dirname, '../dist/');
+const assetFolder = path.resolve(__dirname, "../dist/");
 // const storage 	= path.resolve(__dirname, '../storage/');
-const port         = process.env.PORT;
-const app          = express();
+const port = process.env.PORT;
+const app = express();
 
 app.use(express.static(assetFolder));
 // app.use(express.static(storage));
 
 app.use(bodyParser.json());
 
-
 configPassport(app, express);
 
-app.use('/', routes);
+app.use("/", routes);
 
-app.listen(port, () => console.log(`Server is listening on port ${port}`));
+const sslserver = https.createServer(
+  {
+    key: fs.readFileSync(path.resolve(__dirname, "../ssl/key.pem")),
+    cert: fs.readFileSync(path.resolve(__dirname, "../ssl/cert.pem")),
+  },
+  app
+);
+
+sslserver.listen(port, () => console.log(`Server is listening on port ${port}`));
+// app.listen(port, () => console.log(`Server is listening on port ${port}`));
