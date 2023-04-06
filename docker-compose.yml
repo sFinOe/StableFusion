@@ -3,15 +3,21 @@ services:
   db:
     image: mongo
     container_name: my-db
-    restart: always
+    restart: on-failure
+    ports:
+      - 27017:27017
     volumes:
       - ./data:/data/db
   app:
     build: .
     container_name: my-app
     restart: on-failure
+    volumes:
+      - ./storages/gallery:/app/storage/gallery
+      - ./storages/selfies:/app/storage/selfies
     ports:
-      - 3000:3000
+      - 80:80
+      - 443:443
     depends_on:
       - db
     environment:

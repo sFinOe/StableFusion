@@ -1,5 +1,4 @@
-# Use an official Node.js runtime as a parent image
-FROM node:18
+FROM node:18-bullseye-slim
 
 # Set the working directory to /app
 WORKDIR /app
@@ -18,8 +17,5 @@ RUN mkdir -p /app/storage/gallery && \
 
 ENV NODE_ENV=production
 
-EXPOSE 3000
-
 RUN npm run build
-# Set the command to start the server
-CMD npm start
+ENTRYPOINT npm start:server
