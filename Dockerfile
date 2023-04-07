@@ -18,4 +18,4 @@ RUN mkdir -p /app/storage/gallery && \
 ENV NODE_ENV=production
 
 RUN npm run build
-ENTRYPOINT npm start:server
+ENTRYPOINT npm run start:server
