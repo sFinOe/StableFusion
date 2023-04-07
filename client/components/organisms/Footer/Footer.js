@@ -41,7 +41,7 @@ export default function FooterComponent() {
 
 
 
-export function CachedImage({ src, style }) {
+export function CachedImage({ src, style, className }) {
   const { data } = useQuery(['image', src], async () => {
     const response = await fetch(src);
     return response.blob();
@@ -52,5 +52,5 @@ export function CachedImage({ src, style }) {
 
   const url = data ? URL.createObjectURL(data) : src;
 
-  return <img src={url} alt="cached image" style={style} />;
+  return <img src={url} alt="cached image" style={style} className={className} />;
 }

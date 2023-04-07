@@ -1,18 +1,12 @@
 import React, { useState, useEffect, useCallback } from "react";
-
 import { Store as RNC } from "react-notifications-component";
-
 import { postUpload } from "_api/upload";
 import { CheckStudio, PostStudio, GetStudioImages, PostDeleteStudio, PostTraining, PostPrompts } from "_api/studio";
-
 import { formatTime } from "../Assets";
 import ImageComponent from "./GetImage";
 import PreImages from "./PreImages";
-
 import styles from "./styles.module.css";
-
 import { Text, Button, Input, Loading, Avatar, Grid } from "@nextui-org/react";
-
 import approval from "../../../../assets/icons/approval.svg";
 import { UploadIcon, ValidIcon, LightningIcon, RightArrowIcon } from "../../../../assets/icons/icons";
 import loading from "../../../../assets/images/loading.svg";
@@ -433,7 +427,7 @@ function FileUpload() {
     CheckAvailableStudio();
   };
 
-  UpdateStudio();
+  // UpdateStudio();
 
   return (
     <div className={styles.root}>

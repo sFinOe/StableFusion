@@ -3,6 +3,7 @@ import styles from './styles.module.css';
 import {CachedImage} from '_components/organisms/Footer/Footer';
 
 function Image({ source }) {
+  // return <img src={source} alt="" className={styles.image} style={{ width: '200px', height: '200px' }} />;
   return <CachedImage src={source} alt="" className={styles.image} style={{ width: '200px', height: '200px' }} />;
 }
 

@@ -27,13 +27,13 @@ configPassport(app, express);
 
 app.use("/", routes);
 
-const sslserver = https.createServer(
-  {
-    key: fs.readFileSync(path.resolve(__dirname, "../ssl/key.pem")),
-    cert: fs.readFileSync(path.resolve(__dirname, "../ssl/cert.pem")),
-  },
-  app
-);
+// const sslserver = https.createServer(
+//   {
+//     key: fs.readFileSync(path.resolve(__dirname, "../ssl/key.pem")),
+//     cert: fs.readFileSync(path.resolve(__dirname, "../ssl/cert.pem")),
+//   },
+//   app
+// );
 
-sslserver.listen(port, () => console.log(`Server is listening on port ${port}`));
-// app.listen(port, () => console.log(`Server is listening on port ${port}`));
+// sslserver.listen(port, () => console.log(`Server is listening on port ${port}`));
+app.listen(port, () => console.log(`Server is listening on port ${port}`));
