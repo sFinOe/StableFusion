@@ -48,7 +48,7 @@ router.post("/register", (req, res) => {
             from: `${process.env.SMTP_USER}`,
             to: req.body.username,
             subject: "Email Verification",
-            text: `Please click on the following link to verify your email: http://${process.env.HOST_NAME}/verify/${savedUser.email_verification_token}`,
+            text: `Please click on the following link to verify your email: ${process.env.HOST_NAME}/verify/${savedUser.email_verification_token}`,
           };
           transporter.sendMail(mailOptions, (error, info) => {
             if (error) {
