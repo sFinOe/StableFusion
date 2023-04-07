@@ -43,6 +43,7 @@ router.get('/api/tags', (req, res) => {
 });
 
 router.get('/*', (req, res) => {
+  res.setHeader('Cache-Control', 'public, max-age=604800');
   res.sendFile(path.resolve(__dirname, '../../dist', 'index.html'));
 });
 
