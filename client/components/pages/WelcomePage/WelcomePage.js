@@ -13,6 +13,7 @@ import publish from '../../../assets/images/publish.svg';
 import square from '../../../assets/images/square.svg';
 
 import styles from './styles.module.css';
+import {CachedImage} from '_components/organisms/Footer/Footer';
 
 import '@fontsource/ubuntu/500.css';
 
@@ -46,7 +47,8 @@ export default function WelcomePage() {
           </Grid>
         </Grid.Container>
         <Grid>
-          <img src="/images/landing_page.png" alt="landing page" style={{width : "600px", height : "600px", objectFit : "cover", marginTop : "30px" }} />
+          {/* <img src="/images/landing_page.png" alt="landing page" style={{width : "600px", height : "600px", objectFit : "cover", marginTop : "30px" }} /> */}
+          <CachedImage src="/images/landing_page.png" style={{width : "600px", height : "600px", objectFit : "cover", marginTop : "30px" }} />
         </Grid>
       </Container>
       <div className={styles.ai_middle_body}>

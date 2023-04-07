@@ -4,7 +4,7 @@ import Footer from 'react-bulma-companion/lib/Footer';
 import Container from 'react-bulma-companion/lib/Container';
 
 import { Text } from '@nextui-org/react';
-
+import { useQuery } from 'react-query';
 import styles from './styles.module.css';
 
 export default function FooterComponent() {
@@ -36,4 +36,21 @@ export default function FooterComponent() {
       </div>
     </Footer>
   );
+}
+
+
+
+
+export function CachedImage({ src, style }) {
+  const { data } = useQuery(['image', src], async () => {
+    const response = await fetch(src);
+    return response.blob();
+  }, {
+    staleTime: 60 * 60 * 1000, // cache for one hour
+    cacheTime: 60 * 60 * 1000, // clear cache after one hour
+  });
+
+  const url = data ? URL.createObjectURL(data) : src;
+
+  return <img src={url} alt="cached image" style={style} />;
 }
