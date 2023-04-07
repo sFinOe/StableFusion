@@ -433,7 +433,7 @@ function FileUpload() {
     CheckAvailableStudio();
   };
 
-  // UpdateStudio();
+  UpdateStudio();
 
   return (
     <div className={styles.root}>
