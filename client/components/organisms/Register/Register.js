@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import R from 'ramda';
 
@@ -7,16 +6,13 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCheck } from '@fortawesome/free-solid-svg-icons/faCheck';
 import { faTriangleExclamation } from '@fortawesome/free-solid-svg-icons/faTriangleExclamation';
 
-import Box from 'react-bulma-companion/lib/Box';
-// import Button from 'react-bulma-companion/lib/Button';
-import Title from 'react-bulma-companion/lib/Title';
 import Field from 'react-bulma-companion/lib/Field';
 import Control from 'react-bulma-companion/lib/Control';
 import Icon from 'react-bulma-companion/lib/Icon';
 // import Input from 'react-bulma-companion/lib/Input';
 import '@fontsource/ubuntu';
 
-import { Card, Grid, Text, Input, Checkbox, Loading,Button } from '@nextui-org/react';
+import { Card, Text, Input, Loading,Button } from '@nextui-org/react';
 
 import useKeyPress from '_hooks/useKeyPress';
 import { postCheckUsername } from '_api/users';

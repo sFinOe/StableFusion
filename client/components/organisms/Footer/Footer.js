@@ -2,7 +2,6 @@ import React from 'react';
 
 import Footer from 'react-bulma-companion/lib/Footer';
 import Container from 'react-bulma-companion/lib/Container';
-import Content from 'react-bulma-companion/lib/Content';
 
 import { Text } from '@nextui-org/react';
 

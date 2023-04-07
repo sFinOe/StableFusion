@@ -7,7 +7,7 @@ import '@fontsource/ubuntu';
 // import Button from 'react-bulma-companion/lib/Button';
 import Container from 'react-bulma-companion/lib/Container';
 
-import { Card, Grid, Text, Input, Checkbox, Button } from '@nextui-org/react';
+import { Card, Text, Input, Checkbox, Button } from '@nextui-org/react';
 
 import useKeyPress from '_hooks/useKeyPress';
 import { attemptLogin } from '_store/thunks/auth';

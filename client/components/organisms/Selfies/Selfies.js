@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from "react";
-import { Text, Button, Input, Loading, Avatar, Grid, Card, Modal, Image, Popover, Divider } from '@nextui-org/react';
+import { Text, Button, Grid, Modal } from '@nextui-org/react';
 import Container from 'react-bulma-companion/lib/Container';
 
  

@@ -1,11 +1,11 @@
 import React, {useState, useEffect} from "react";
-import { Text, Button, Input, Loading, Avatar, Grid, Card, Modal, Image, Popover, Divider } from '@nextui-org/react';
+import { Text, Button, Input, Loading, Grid, Modal, Popover, Divider } from '@nextui-org/react';
 import Container from 'react-bulma-companion/lib/Container';
 import queryString from "query-string";
 
 import { Store as RNC } from 'react-notifications-component';
 
-import { GetGallery, PostDeleteImage, GetLowerImage, PostMakeMore } from '_api/gallery';
+import { GetGallery, PostDeleteImage, GetLowerImage } from '_api/gallery';
 import { PostInference } from '_api/inference';
 import { GetSingleStudio } from "_api/studio";
 

@@ -1,5 +1,4 @@
 const express = require('express');
-const { User } = require('../database/schemas');
 const multer = require('multer');
 const archiver = require("archiver");
 const bodyParser = require('body-parser');

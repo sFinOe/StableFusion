@@ -3,6 +3,7 @@ const path = require("path");
 const bodyParser = require("body-parser");
 const https = require("https");
 const fs = require("fs");
+const compression = require("compression");
 
 require("./config/environment");
 require("./database");
@@ -14,6 +15,8 @@ const assetFolder = path.resolve(__dirname, "../dist/");
 // const storage 	= path.resolve(__dirname, '../storage/');
 const port = process.env.PORT;
 const app = express();
+
+app.use(compression());
 
 app.use(express.static(assetFolder));
 // app.use(express.static(storage));

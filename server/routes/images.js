@@ -1,13 +1,5 @@
 const express = require('express');
-const { User } = require('../database/schemas');
-const bodyParser = require('body-parser');
 const fs = require('fs');
-const https = require('https');
-const { async } = require('regenerator-runtime');
-const axios = require('axios');
-const path = require('path');
-const sharp = require('sharp');
-const rp = require('request-promise');
 
 
 const router   = express.Router();

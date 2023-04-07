@@ -2,14 +2,12 @@ import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { push } from 'redux-first-history';
 import R from 'ramda';
-import { Text, Button, Input, Loading, Avatar, Grid, Card, Modal, Image, Popover, Divider } from '@nextui-org/react';
+import { Text, Grid, Card} from '@nextui-org/react';
 
 import HomeButton from '_components/buttons/HomeButton';
 import ImageRow from '_components/design/ImageRow';
 
-import Section from 'react-bulma-companion/lib/Section';
 import Container from 'react-bulma-companion/lib/Container';
-import Title from 'react-bulma-companion/lib/Title';
 import preview from '../../../assets/images/preview.svg';
 import publish from '../../../assets/images/publish.svg';
 import square from '../../../assets/images/square.svg';

@@ -4,9 +4,6 @@ import { push } from 'redux-first-history';
 import R from 'ramda';
 
 import Section from 'react-bulma-companion/lib/Section';
-import Title from 'react-bulma-companion/lib/Title';
-import Columns from 'react-bulma-companion/lib/Columns';
-import Column from 'react-bulma-companion/lib/Column';
 import { attemptGetTodos } from '_store/thunks/todos';
 
 

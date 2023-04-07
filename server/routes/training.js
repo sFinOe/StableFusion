@@ -1,13 +1,5 @@
 const express = require('express');
 const { User } = require('../database/schemas');
-const multer = require('multer');
-const archiver = require("archiver");
-const bodyParser = require('body-parser');
-const AWS = require("aws-sdk");
-const fs = require('fs');
-const dotenv = require('dotenv');
-const crypto = require('crypto');
-const { async } = require('regenerator-runtime');
 const axios = require("axios");
 const banana = require('@banana-dev/banana-dev');
 const rp = require('request-promise');

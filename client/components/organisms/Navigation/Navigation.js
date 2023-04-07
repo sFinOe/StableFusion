@@ -2,14 +2,13 @@ import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import R from 'ramda';
-import { Button ,Avatar, Grid} from '@nextui-org/react';
+import { Button ,Avatar} from '@nextui-org/react';
 
 import { CameraIcon } from '../../../assets/icons/CameraIcon';
 import { GalleryIcon } from '../../../assets/icons/icons';
 
 import Navbar from 'react-bulma-companion/lib/Navbar';
 import Container from 'react-bulma-companion/lib/Container';
-import Image from 'react-bulma-companion/lib/Image';
 import Title from 'react-bulma-companion/lib/Title';
 
 import '@fontsource/ubuntu';

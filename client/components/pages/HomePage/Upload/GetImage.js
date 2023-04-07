@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { GetStudioImages } from '_api/studio';
 
 import { Avatar } from '@nextui-org/react';
 

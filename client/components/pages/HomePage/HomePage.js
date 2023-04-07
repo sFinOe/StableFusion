@@ -5,9 +5,6 @@ import R from 'ramda';
 
 import Section from 'react-bulma-companion/lib/Section';
 import Container from 'react-bulma-companion/lib/Container';
-import Title from 'react-bulma-companion/lib/Title';
-
-import { Text } from '@nextui-org/react';
 
 import FileUpload from './Upload/FileUpload';
 
