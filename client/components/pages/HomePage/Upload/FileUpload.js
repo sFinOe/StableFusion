@@ -12,17 +12,9 @@ import { UploadIcon, ValidIcon, LightningIcon, RightArrowIcon } from "../../../.
 import loading from "../../../../assets/images/loading.svg";
 import { io } from "socket.io-client";
 
-let socket;
-if (`${window.location.port}` === "") {
-  console.log(`${window.location.port}`);
-  socket = io("http://localhost:80", {
-    path: "/xdmysocket",
-  });
-} else {
-  socket = io(`http://localhost:${window.location.port}`, {
-    path: "/xdmysocket",
-  });
-}
+const socket = io(`http://localhost:80`, {
+  path: "/xdmysocket",
+});
 
 socket.on("connect", () => {
   console.log("connected");
