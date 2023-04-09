@@ -31,7 +31,7 @@ async function generatePreImages(req, prompts) {
       tokenPath: tokenPath,
     };
     try {
-      const res = await rp.post("http://localhost:3000/api/v1/PostInference", { json: data });
+      const res = await rp.post("https://localhost:3000/api/v1/PostInference", { json: data });
       console.log(res);
     } catch (error) {
       console.error(error);
