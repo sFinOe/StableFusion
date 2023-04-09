@@ -12,7 +12,7 @@ import { UploadIcon, ValidIcon, LightningIcon, RightArrowIcon } from "../../../.
 import loading from "../../../../assets/images/loading.svg";
 import { io } from "socket.io-client";
 
-const socket = io(`http://localhost:3000`, {
+const socket = io(`http://${window.location.hostname}:${window.location.port}`, {
   path: "/xdmysocket",
 });
 
