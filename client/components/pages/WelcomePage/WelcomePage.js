@@ -3,18 +3,14 @@ import { useDispatch, useSelector } from "react-redux";
 import { push } from "redux-first-history";
 import R from "ramda";
 import { Text, Grid, Card } from "@nextui-org/react";
-
 import HomeButton from "_components/buttons/HomeButton";
 import ImageRow from "_components/design/ImageRow";
-
 import Container from "react-bulma-companion/lib/Container";
 import preview from "../../../assets/images/preview.svg";
 import publish from "../../../assets/images/publish.svg";
 import square from "../../../assets/images/square.svg";
-
 import styles from "./styles.module.css";
 import { CachedImage } from "_components/organisms/Footer/Footer";
-
 import "@fontsource/ubuntu/500.css";
 
 export default function WelcomePage() {

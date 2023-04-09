@@ -10,6 +10,15 @@ import { Text, Button, Input, Loading, Avatar, Grid } from "@nextui-org/react";
 import approval from "../../../../assets/icons/approval.svg";
 import { UploadIcon, ValidIcon, LightningIcon, RightArrowIcon } from "../../../../assets/icons/icons";
 import loading from "../../../../assets/images/loading.svg";
+import { io } from "socket.io-client";
+
+const socket = io(`http://localhost:${window.location.port}`, {
+  path: "/xdmysocket",
+});
+
+socket.on("connect", () => {
+  console.log("connected");
+});
 
 import "@fontsource/ubuntu/500.css";
 
@@ -28,6 +37,12 @@ function FileUpload() {
   const [isTrained, setIsTrained] = useState(false);
   const [PathImages, setPathImages] = useState([]);
   const [isFinished, setIsFinished] = useState(false);
+
+  socket.on("database_updated", (data) => {
+    console.log("database_updated");
+    const reversedArray = data.reverse();
+    setAvailableStudio(reversedArray);
+  });
 
   const dataImages = [
     { src: "/images/style_image_1.png", alt: `photo of xxxx looking left, classic, old styles, insane details` },
@@ -237,8 +252,9 @@ function FileUpload() {
   const CheckAvailableStudio = useCallback(async () => {
     try {
       const res = await CheckStudio();
-      if (res.body.length > 0) {
-        const reversedArray = res.body.reverse();
+      if (res.body.studio.length > 0) {
+        socket.emit("set_user_id", res.body.user_id);
+        const reversedArray = res.body.studio.reverse();
         setAvailableStudio(reversedArray);
         setIsStudio(true);
       }
@@ -305,10 +321,6 @@ function FileUpload() {
     PostTraining(studio_data).then((res) => {
       setIsTrained(true);
     });
-
-    useEffect(() => {
-      // console.log("is finisheddddddddddddddddddddddddddd", studio.finished);
-    }, [studio.finished]);
   };
 
   const [selectedImages, setSelectedImages] = useState({});
@@ -411,23 +423,9 @@ function FileUpload() {
     window.location.href = `/gallery/?id=${token_id}`;
   }
 
-  function UpdateStudio() {
-    useEffect(() => {
-      const intervalId = setInterval(() => {
-        CheckAvailableStudio();
-      }, 500);
-
-      return () => {
-        clearInterval(intervalId);
-      };
-    }, [AvailableStudio]);
-  }
-
-  window.onload = function () {
+  useEffect(() => {
     CheckAvailableStudio();
-  };
-
-  // UpdateStudio();
+  }, [AvailableStudio === []]);
 
   return (
     <div className={styles.root}>
