@@ -51,17 +51,17 @@ app.use("/", routes);
 
 ///////////////
 
-// const httpsServer = https.createServer(
-//   {
-//     key: fs.readFileSync(path.resolve(__dirname, "../ssl/key.pem")),
-//     cert: fs.readFileSync(path.resolve(__dirname, "../ssl/cert.pem")),
-//   },
-//   app
-// );
+const httpsServer = https.createServer(
+  {
+    key: fs.readFileSync(path.resolve(__dirname, "../ssl/key.pem")),
+    cert: fs.readFileSync(path.resolve(__dirname, "../ssl/cert.pem")),
+  },
+  app
+);
 
-// httpsServer.listen(443, () => {
-//   console.log(`Server listening on port 443 SSL`);
-// });
+httpsServer.listen(443, () => {
+  console.log(`Server listening on port 443 SSL`);
+});
 
 httpServer.listen(port, () => {
   console.log(`Server listening on port ${port}`);
