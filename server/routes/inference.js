@@ -45,11 +45,16 @@ async function CreateDir(token_path) {
 module.exports = function (io, userSockets) {
   router.post("/PostInference", (req, res) => {
     let token_path = "";
-    const user_id = req.body.user_id;
-    const socket_id = userSockets[user_id.toString()];
+    let user_id = "";
+    let socket_id = "";
 
-    if (req.body.tokenPath != "") token_path = req.body.tokenPath;
-    else token_path = `${req.user._id}/${req.body.token_id}`;
+    if (req.body.tokenPath != "") {
+      token_path = req.body.tokenPath;
+      user_id = req.body.user_id;
+      socket_id = userSockets[user_id.toString()];
+    } else {
+      token_path = `${req.user._id}/${req.body.token_id}`;
+    }
     const token_id = req.body.token_id;
     const prompt = req.body.prompt;
     const negative_prompt = req.body.negative_prompt;
@@ -141,7 +146,7 @@ module.exports = function (io, userSockets) {
                             if (!user) {
                               console.log("no user");
                             }
-                            if (socket_id) io.to(socket_id).emit("database_updated", user.studio);
+                            if (socket_id != "" && socket_id != null) io.to(socket_id).emit("database_updated", user.studio);
                           });
 
                           let NewPath = filePaths[0].replace("storage", "/images");
