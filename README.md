@@ -1,7 +1,12 @@
+# StableFusion Web Application
 
-# Stable Diffusion Web App
+A User-interface Web App using technology of Stable Diffusion and Dreambooth to train a model and generate images with higher quality using GFPGAN
+model.
 
-A User-interface Web App using technology of Stable Diffusion and Dreambooth to train a model and generate images with higher quality using GFPGAN model.
+<p>
+  <img src="/misc/Capture2.PNG" width="250" />
+  <img src="/misc/Capture3.PNG" width="250" />
+</p>
 
 # Features
 
