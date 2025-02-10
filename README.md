@@ -4,8 +4,8 @@ A User-interface Web App using technology of Stable Diffusion and Dreambooth to 
 model.
 
 <p>
-  <img src="/misc/Capture2.PNG" width="250" />
-  <img src="/misc/Capture3.PNG" width="250" />
+  <img src="/misc/Capture2.PNG" width="500px" />
+  <img src="/misc/Capture3.PNG" width="500px" />
 </p>
 
 # Features
