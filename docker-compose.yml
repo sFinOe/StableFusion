@@ -1,16 +1,16 @@
-version: '3'
+version: "3"
 services:
-  db:
+  stablefusion_db:
     image: mongo
-    container_name: my-db
+    container_name: stablefusion_db
     restart: on-failure
     ports:
       - 27017:27017
     volumes:
       - ./data:/data/db
-  app:
+  stablefusion_app:
     build: .
-    container_name: my-app
+    container_name: stablefusion_app
     restart: on-failure
     volumes:
       - ./storages/gallery:/app/storage/gallery
@@ -19,7 +19,7 @@ services:
       - 80:80
       - 443:443
     depends_on:
-      - db
+      - stablefusion_db
     environment:
       - NODE_ENV=production
       - MONGO_URI=mongodb://db:27017/mern

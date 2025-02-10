@@ -43,7 +43,7 @@ export default function Navigation() {
         <Navbar.Brand>
           <Navbar.Item to={auth ? "/home" : "/"} aria-label="main navigation" component={Link}>
             <Title>
-              <img src="/images/logo.png" alt="logo" width={130} height={70} />
+              <img src="/images/logo.png" alt="logo" height={90} />
             </Title>
           </Navbar.Item>
           <div className="navbar-brand-right">
